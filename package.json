@@ -1,16 +1,44 @@
 {
-  "name": "react-native-threepigeon",
-  "version": "1.0.0",
-  "description": "## Getting started",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "react-native-threepigeon",
+  "_id": "react-native-threepigeon@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-VxGxHWzO9HOXcgYBvzfwtdA8z4JBFwGHh4GCoLXL5UJtZZBqQJJ8dwHPgEkon8kt8pKqJeygQFJ79VbJ+5PRgw==",
+  "_location": "/react-native-threepigeon",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-threepigeon",
+    "name": "react-native-threepigeon",
+    "escapedName": "react-native-threepigeon",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-threepigeon/-/react-native-threepigeon-1.0.0.tgz",
+  "_shasum": "334bb22a681a4f30cb03c1c9f450bc5f2fd486f9",
+  "_spec": "react-native-threepigeon",
+  "_where": "/Users/hz001/Desktop/bgit/MobiTask/RNQuZhanKe",
+  "author": {
+    "name": "lanlanlittle"
+  },
+  "bugs": {
+    "url": "https://github.com/lanlanlittle/react-native-threepigeon/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "## Getting started",
+  "homepage": "https://github.com/lanlanlittle/react-native-threepigeon#readme",
   "keywords": [
     "react-native"
   ],
-  "author": "lanlanlittle",
   "license": "ISC",
+  "main": "index.js",
+  "name": "react-native-threepigeon",
   "peerDependencies": {
     "react-native": "^0.41.2"
   },
@@ -18,8 +46,8 @@
     "type": "git",
     "url": "git+https://github.com/lanlanlittle/react-native-threepigeon.git"
   },
-  "bugs": {
-    "url": "https://github.com/lanlanlittle/react-native-threepigeon/issues"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/lanlanlittle/react-native-threepigeon#readme"
+  "version": "1.0.0"
 }

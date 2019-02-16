@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1F7AEDA2216BDF200D95AAF /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F7AED92216BDF200D95AAF /* UserNotifications.framework */; };
+		A1F7AEDC2216BE1200D95AAF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F7AEDB2216BE1200D95AAF /* CoreTelephony.framework */; };
+		A1F7AEDD2216BE1900D95AAF /* libXG-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F7AED32216BDB700D95AAF /* libXG-SDK.a */; };
+		A1F7AEDF2216BE2B00D95AAF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F7AEDE2216BE2B00D95AAF /* SystemConfiguration.framework */; };
 		B3E7B58A1CC2AC0600A0062D /* RNXg.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNXg.m */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +28,11 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNXg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNXg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1F7AED12216BDB700D95AAF /* XGPush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XGPush.h; sourceTree = "<group>"; };
+		A1F7AED32216BDB700D95AAF /* libXG-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libXG-SDK.a"; sourceTree = "<group>"; };
+		A1F7AED92216BDF200D95AAF /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		A1F7AEDB2216BE1200D95AAF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A1F7AEDE2216BE2B00D95AAF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B3E7B5881CC2AC0600A0062D /* RNXg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNXg.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNXg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNXg.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -33,6 +42,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F7AEDF2216BE2B00D95AAF /* SystemConfiguration.framework in Frameworks */,
+				A1F7AEDC2216BE1200D95AAF /* CoreTelephony.framework in Frameworks */,
+				A1F7AEDA2216BDF200D95AAF /* UserNotifications.framework in Frameworks */,
+				A1F7AEDD2216BE1900D95AAF /* libXG-SDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,10 +63,31 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				A1F7AED02216BDB700D95AAF /* sdk */,
 				B3E7B5881CC2AC0600A0062D /* RNXg.h */,
 				B3E7B5891CC2AC0600A0062D /* RNXg.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				A1F7AED82216BDF200D95AAF /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		A1F7AED02216BDB700D95AAF /* sdk */ = {
+			isa = PBXGroup;
+			children = (
+				A1F7AED12216BDB700D95AAF /* XGPush.h */,
+				A1F7AED32216BDB700D95AAF /* libXG-SDK.a */,
+			);
+			path = sdk;
+			sourceTree = "<group>";
+		};
+		A1F7AED82216BDF200D95AAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1F7AEDE2216BE2B00D95AAF /* SystemConfiguration.framework */,
+				A1F7AEDB2216BE1200D95AAF /* CoreTelephony.framework */,
+				A1F7AED92216BDF200D95AAF /* UserNotifications.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,12 +238,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
+					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/sdk",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNXg;
 				SKIP_INSTALL = YES;
@@ -225,7 +262,10 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/sdk",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNXg;
 				SKIP_INSTALL = YES;
